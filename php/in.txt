@@ -1,0 +1,179 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin-top: 10rem; /* Espaço para a barra de pesquisa */
+    
+}
+body {
+  background-color: #E4E9F7;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de igual largura */
+    gap: 20px; /* Espaçamento entre os cartões */
+    max-width: 100%;
+    margin-left: -5rem; /* Ajuste conforme necessário */
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 30px;
+    width: 300px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adiciona uma leve sombra para destacar */
+}
+
+.product-card h3 {
+    margin: 0;
+}
+
+.product-card .details {
+    margin-top: 10px;
+}
+
+.product-card .buttons {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 7px; 
+}
+
+.product-card button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.product-card button.sub {
+    background-color: #f44336;
+}
+
+.invoice {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px; /* Ajuste conforme necessário */
+    position: fixed; /* Posiciona a fatura no lado direito */
+    right: 20px; /* Ajuste a distância do lado direito */
+    top: 50px; /* Ajuste a distância do topo */
+    max-height: calc(100vh - 40px); /* Evita que a fatura ultrapasse a altura da janela de visualização */
+    overflow-y: auto; /* Adiciona rolagem se necessário */
+    background-color: #E4E9F7; /* Adiciona um fundo branco para impressão */
+}
+
+.invoice h2, h4, p {
+    color: transparent;
+}
+
+
+
+.invoice ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.invoice ul li h2, h4, p{
+    color: black;
+}
+
+.invoice ul li {
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+    margin-top: 1rem;
+}
+
+.invoice ul li:last-child {
+    border-bottom: none;
+}
+
+.invoice-header img {
+    width: 100%; 
+    max-width: 200px; 
+    display: block; 
+    margin: 0 auto;
+}
+
+.invoice-header p {
+    text-align: center;
+}
+
+/* Estilos específicos para impressão */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .invoice, .invoice * {
+        visibility: visible;
+    }
+    .invoice {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 27rem;
+        height: 100%;
+        overflow: hidden;
+        background-color: white;
+    }
+    .invoice h2, h4, p {
+    color: black;
+    }
+    .invoice p {
+        margin-bottom: 100%;
+    }
+
+    .invoice h2, h4, p {
+    display: flex;
+    justify-content: center;
+}
+
+
+.print {
+    color: transparent;
+}
+input[type="number"]{
+    border: none;
+    font-size: 16px;
+}
+    
+}
+
+
+.invoice button {
+    background-color: #11101d;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Barra de pesquisa */
+.search-bar {
+    position: fixed;
+    top: 20px; /* Ajuste conforme necessário */
+    left: 50%;
+    margin-top: 1.5rem;
+    transform: translateX(-50%); /* Centraliza a barra de pesquisa horizontalmente */
+    padding: 10px;
+    z-index: 1000; /* Garante que a barra de pesquisa fique sobre outros elementos */
+    width: 400px; /* Ajuste a largura conforme necessário */
+}
+
+input[type="number"]{
+    width: 5rem;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #11101d;
+}

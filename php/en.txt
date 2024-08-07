@@ -1,0 +1,39 @@
+<div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus'></i>
+      <span class="logo_name">Empresa</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="http://localhost/project/index.php">
+          <i class='bx bx-box'></i>
+          <span class="link_name">Voltar na Dashboard</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="http://localhost/project/index.php">Voltar na Dashboard</a></li>
+        </ul>
+      </li>
+      
+      <li>
+        <a href="http://localhost/project/php/criar_fatura.php">
+          <i class='bx bx-file'></i>
+          <span class="link_name">Criar Fatura</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="http://localhost/project/php/criar_fatura.php">Criar Fatura</a></li>
+        </ul>
+      </li>
+      
+      
+      <li>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span class="link_name">Definições</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Setting</a></li>
+        </ul>
+      </li>
+     
+    </ul>
+  </div>
